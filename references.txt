@@ -1,0 +1,24 @@
+Build runner comments:
+dart run build_runner build --delete-conflicting-outputs
+dart run build_runner watch --delete-conflicting-outputs
+
+
+AppLocalizations:
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+final AppLocalizations loc = AppLocalizations.of(context)!;
+
+Local properties:
+flutter.versionName=0.0.1
+flutter.versionCode=01
+
+version change :
+
+pubspec.yaml
+local.properties
+app.constants.dart
+README.md
+
+Mode change :
+
+local.properties
+main.dart
