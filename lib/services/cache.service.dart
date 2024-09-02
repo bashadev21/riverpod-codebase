@@ -10,6 +10,7 @@ abstract class CacheService {
   dynamic getCache(String key);
   Future<void> clearCache(String key);
   Future<void> clearAll();
+  
 }
 
 class CacheServiceImpl implements CacheService {

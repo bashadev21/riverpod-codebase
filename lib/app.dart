@@ -31,6 +31,7 @@ class _AppState extends ConsumerState<App> {
       routeInformationParser: _appRouter.defaultRouteParser(),
       routerDelegate: _appRouter.delegate(
         deepLinkBuilder: (deepLink) => const DeepLink([LoginRoute()]),
+
       ),
       title: AppConstants.app,
       themeMode: darkTheme ? ThemeMode.dark : ThemeMode.light,

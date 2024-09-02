@@ -7,7 +7,7 @@ class AuthLogic extends ChangeNotifier {
   String name = '';
 
   void onName(String value) {
-    name = value;
+    name = value; 
     notifyListeners();
   }
 }

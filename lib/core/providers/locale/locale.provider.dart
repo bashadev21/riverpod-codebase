@@ -9,4 +9,6 @@ class LocaleProvider extends StateNotifier<Locale> {
     if (!L10n.all.contains(locale)) return;
     state = locale;
   }
+  
 }
+

@@ -35,6 +35,7 @@ class _UpdatePageState extends ConsumerState<UpdatePage> {
             ),
             const SizedBox(height: Dimen.space * 4),
             PrimaryTextButton(
+              
               text: 'Update Now',
               onTap: () {},
             ),
