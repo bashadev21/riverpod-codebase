@@ -4,10 +4,12 @@ import 'package:flutter_application/features/auth/domain/repositories/auth_repo.
 import 'package:flutter_application/features/auth/domain/usecase/auth_usecase.dart';
 import 'package:flutter_application/features/auth/presentation/logic/auth/notifier.dart';
 import 'package:flutter_application/features/auth/presentation/logic/auth/state.dart';
+import 'package:flutter_application/services/dio.service.dart';
+import 'package:flutter_application/services/dio/dio_client.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final _datasource = Provider<AuthDataSource>(
-  (ref) => AuthDataSourceImpl(),
+  (ref) => AuthDataSourceImpl(client: DioClient(ref.read(dioProvider))),
 );
 
 final _repository = Provider<AuthRepository>(

@@ -1,5 +1,6 @@
 class API {
   // static const BASE_URL = 'https://reqres.in/api';
-  static const _baseURL = 'https://dummyjson.com';
-  static const login = '$_baseURL/auth/login';
+  static const String baseURL = 'https://dummyjson.com';
+
+  static const String login = '$baseURL/auth/login';
 }

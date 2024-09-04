@@ -1,8 +1,5 @@
-import 'dart:convert';
-
-import 'package:dio/dio.dart';
-import 'package:flutter_application/core/config/api.urls.dart';
 import 'package:flutter_application/features/auth/data/model/login_req.dart';
+import 'package:flutter_application/services/dio/dio_client.dart';
 
 import '../model/login_res.dart';
 
@@ -11,18 +8,17 @@ abstract class AuthDataSource {
 }
 
 class AuthDataSourceImpl implements AuthDataSource {
-  final Dio dio = Dio();
+  final DioClient _client;
+
+  AuthDataSourceImpl({required DioClient client}) : _client = client;
 
   @override
   Future<LoginResponse> login(LoginRequest params) async {
-    print("data source" + params.toJson().toString());
-    print("data source" + API.login.toString());
-
     try {
-      final response = await dio.post(API.login, data: jsonEncode(params));
-      print("data" + response.data.toString());
-      final data = loginResponseFromJson(jsonEncode(response.data));
-      return data;
+      final String body = loginRequestToJson(params);
+      final data = await _client.loginUser(body);
+      final LoginResponse model = loginResponseFromJson(data);
+      return model;
     } catch (e) {
       rethrow;
     }

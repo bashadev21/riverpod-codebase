@@ -48,6 +48,7 @@ dependencies:
   shared_preferences: ^2.2.2 #optional
   path_provider: ^2.1.1
   intl: ^0.18.1
+  retrofit:
 
   # firebase_core: ^2.24.2 // need to enable
   # firebase_analytics: ^10.7.4 // need to enable
