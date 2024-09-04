@@ -11,15 +11,15 @@
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:flutter/material.dart' as _i8;
 import 'package:flutter_application/core/pages/update.dart' as _i6;
-import 'package:flutter_application/features/auth/presentation/ui/forgot_password.dart'
+import 'package:flutter_application/modules/tango_trax/features/auth/presentation/ui/forgot_password.dart'
     as _i2;
-import 'package:flutter_application/features/auth/presentation/ui/login_screen.dart'
+import 'package:flutter_application/modules/tango_trax/features/auth/presentation/ui/login_screen.dart'
     as _i3;
-import 'package:flutter_application/features/auth/presentation/ui/signup_screen.dart'
+import 'package:flutter_application/modules/tango_trax/features/auth/presentation/ui/signup_screen.dart'
     as _i4;
-import 'package:flutter_application/features/dashboard/presentation/index.dart'
+import 'package:flutter_application/modules/tango_trax/features/dashboard/presentation/index.dart'
     as _i1;
-import 'package:flutter_application/features/splash/presentation/pages/index.dart'
+import 'package:flutter_application/modules/tango_trax/features/splash/presentation/pages/index.dart'
     as _i5;
 
 abstract class $AppRouter extends _i7.RootStackRouter {

@@ -1,4 +1,4 @@
-import 'package:flutter_application/features/auth/data/model/login_req.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_req.dart';
 import 'package:flutter_application/services/dio/dio_client.dart';
 
 import '../model/login_res.dart';

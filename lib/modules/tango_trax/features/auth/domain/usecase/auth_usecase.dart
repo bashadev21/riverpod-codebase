@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_application/features/auth/data/model/login_req.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_req.dart';
 
-import '../../../../core/errors/failure.dart';
+import '../../../../../../core/errors/failure.dart';
 import '../../data/model/login_res.dart';
 import '../repositories/auth_repo.dart';
 

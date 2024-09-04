@@ -36,7 +36,7 @@ class _DioClient implements DioClient {
     )
         .compose(
           _dio.options,
-          'https://dummyjson.com/auth/logi',
+          'https://dummyjson.com/auth/login',
           queryParameters: queryParameters,
           data: _data,
         )

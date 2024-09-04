@@ -1,7 +1,7 @@
-import 'package:flutter_application/features/auth/data/model/login_req.dart';
-import 'package:flutter_application/features/auth/data/model/login_res.dart';
-import 'package:flutter_application/features/auth/domain/usecase/auth_usecase.dart';
-import 'package:flutter_application/features/auth/presentation/logic/auth/state.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_req.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_res.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/domain/usecase/auth_usecase.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/presentation/logic/auth/state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AuthNotifier extends StateNotifier<AuthState> {

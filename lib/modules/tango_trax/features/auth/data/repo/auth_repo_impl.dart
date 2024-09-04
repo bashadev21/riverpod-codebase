@@ -3,11 +3,11 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_application/features/auth/data/model/login_req.dart';
-import 'package:flutter_application/features/auth/data/model/login_res.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_req.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_res.dart';
 
-import '../../../../core/errors/failure.dart';
-import '../../../../core/errors/server.dart';
+import '../../../../../../core/errors/failure.dart';
+import '../../../../../../core/errors/server.dart';
 import '../../domain/repositories/auth_repo.dart';
 import '../datasource/auth_datasource.dart';
 

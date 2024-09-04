@@ -1,4 +1,4 @@
-import 'package:flutter_application/features/auth/data/model/login_res.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_res.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 part 'state.freezed.dart';
 

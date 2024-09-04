@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application/core/routes/route.gr.dart';
-import 'package:flutter_application/features/auth/data/model/login_req.dart';
-import 'package:flutter_application/features/auth/data/model/login_res.dart';
-import 'package:flutter_application/features/auth/presentation/logic/others/logic.dart';
-import 'package:flutter_application/features/auth/presentation/logic/provider.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_req.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/data/model/login_res.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/presentation/logic/others/logic.dart';
+import 'package:flutter_application/modules/tango_trax/features/auth/presentation/logic/provider.dart';
 import 'package:flutter_application/services/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
