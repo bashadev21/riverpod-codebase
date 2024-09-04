@@ -19,13 +19,14 @@ class AuthRepositoryImpl extends AuthRepository {
   Future<Either<Failure, LoginResponse>> login(LoginRequest params) async {
     try {
       final result = await dataSource.login(params);
+    
       return Right(result);
     } on ServerException catch (e) {
       return Left(ServerFailure(msg: e.message));
     } on SocketException {
       return const Left(ConnectionFailure(msg: 'No internet connection'));
     } on DioException catch (e) {
-      log('error${e.response!.data}');
+      log('error$e');
       return Left(
         ServerFailure(
           msg: e.response?.data['message'].toString() ??

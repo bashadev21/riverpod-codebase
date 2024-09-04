@@ -29,9 +29,10 @@ class _LoginPageState extends ConsumerState<LoginPage> {
           error: (msg) {},
           success: (data) {
             final cache = ref.read(cacheService);
-            ref
-                .read(routeService)
-                .push(SignupRoute(email: data?.email ?? ''), context,);
+            ref.read(routeService).push(
+                  SignupRoute(email: data?.email ?? ''),
+                  context,
+                );
 
             cache.setCache('loginDetails', jsonEncode(data?.toJson()));
             final response = cache.getCache('loginDetails');
@@ -48,8 +49,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
           Text(logic.name),
           Consumer(builder: (context, ref, child) {
             return state.maybeWhen(
-
-
+              error: (msg) => Text(msg ?? ''),
               orElse: () => const Text('No Data'),
               loading: () => const Center(child: CircularProgressIndicator()),
               success: (data) => Text(data?.email ?? ''),

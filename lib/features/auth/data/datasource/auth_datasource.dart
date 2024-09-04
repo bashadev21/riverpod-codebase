@@ -17,7 +17,7 @@ class AuthDataSourceImpl implements AuthDataSource {
     try {
       final String body = loginRequestToJson(params);
       final data = await _client.loginUser(body);
-      final LoginResponse model = loginResponseFromJson(data);
+      final LoginResponse model = LoginResponse.fromJson(data);
       return model;
     } catch (e) {
       rethrow;
