@@ -17,7 +17,7 @@ Future<void> main() async {
   // await appCheck.setTokenAutoRefreshEnabled(true);
   final sharedPreferences = await SharedPreferences.getInstance();
   // Enable dio services
-  final dio = DioApi.createDio();
+  final dio = DioService.getInstance();
   // Enable Firebase crashlytics
   // if (mode == Flavour.release) {
   //   await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);

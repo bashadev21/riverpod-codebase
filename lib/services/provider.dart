@@ -1,3 +1,5 @@
+import 'package:flutter_application/services/api.service.dart';
+import 'package:flutter_application/services/dio.service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_application/services/cache.service.dart';
 import 'package:flutter_application/services/file.service.dart';
@@ -12,6 +14,13 @@ final fileService = Provider<FileService>(
 );
 final cacheService = Provider<CacheService>(
   (ref) => CacheServiceImpl(sharedPref: ref.read(sharedPreferencesProvider)),
+);
+
+final apiService = Provider<ApiService>(
+  (ref) => ApiServiceImpl(
+    cacheService: ref.read(cacheService),
+    dio: ref.read(dioProvider),
+  ),
 );
 
 // final permissionService = Provider<PermissionService>(

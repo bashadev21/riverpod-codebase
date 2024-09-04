@@ -26,20 +26,21 @@ class _LoginPageState extends ConsumerState<LoginPage> {
 
     ref.listen(authNotifier, (previous, next) {
       next.whenOrNull(
-          error: (msg) {},
-          success: (data) {
-            final cache = ref.read(cacheService);
-            ref.read(routeService).push(
-                  SignupRoute(email: data?.email ?? ''),
-                  context,
-                );
+        error: (msg) {},
+        success: (data) {
+          final cache = ref.read(cacheService);
+          ref.read(routeService).push(
+                SignupRoute(email: data?.email ?? ''),
+                context,
+              );
 
-            cache.setCache('loginDetails', jsonEncode(data?.toJson()));
-            final response = cache.getCache('loginDetails');
-            LoginResponse datavalues = loginResponseFromJson(response);
+          cache.setCache('loginDetails', jsonEncode(data?.toJson()));
+          final response = cache.getCache('loginDetails');
+          LoginResponse datavalues = loginResponseFromJson(response);
 
-            print(datavalues.email);
-          });
+          print(datavalues.email);
+        },
+      );
     });
 
     return Scaffold(

@@ -50,7 +50,7 @@ class _ForgotPasswordPageState extends ConsumerState<ForgotPasswordPage> {
                 );
                 ref.read(authNotifier.notifier).login(params);
               },
-              child: Text('LOGIN'),
+              child: const Text('LOGIN'),
             ),
           ),
         ],

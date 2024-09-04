@@ -4,12 +4,11 @@ import 'package:flutter_application/modules/tango_trax/features/auth/domain/repo
 import 'package:flutter_application/modules/tango_trax/features/auth/domain/usecase/auth_usecase.dart';
 import 'package:flutter_application/modules/tango_trax/features/auth/presentation/logic/auth/notifier.dart';
 import 'package:flutter_application/modules/tango_trax/features/auth/presentation/logic/auth/state.dart';
-import 'package:flutter_application/services/dio.service.dart';
-import 'package:flutter_application/services/dio/dio_client.dart';
+import 'package:flutter_application/services/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final _datasource = Provider<AuthDataSource>(
-  (ref) => AuthDataSourceImpl(client: DioClient(ref.read(dioProvider))),
+  (ref) => AuthDataSourceImpl(apiService: ref.read(apiService)),
 );
 
 final _repository = Provider<AuthRepository>(

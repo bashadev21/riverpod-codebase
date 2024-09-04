@@ -29,7 +29,7 @@ class _SignupPageState extends ConsumerState<SignupPage> {
                   ref.read(authLogic).onName('Basha');
                   ref.read(routeService).pop(context);
                 },
-                child: Text('SIGNUP')),
+                child: const Text('SIGNUP')),
           ),
         ],
       ),
