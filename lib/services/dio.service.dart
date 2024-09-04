@@ -15,7 +15,6 @@ class DioApi {
 
   static Dio createDio() {
     final BaseOptions options = BaseOptions(
-
       receiveTimeout: const Duration(seconds: 15000),
       connectTimeout: const Duration(seconds: 15000),
       sendTimeout: const Duration(seconds: 15000),
